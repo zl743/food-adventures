@@ -3,10 +3,6 @@ import Page from './page.js';
 import Menu from './menu.js';
 class App extends React.Component {
   state = {
-    Name : 'Name',
-    Description : 'Description Goes Here',
-    Rating : '★★★★★',
-    Rating2 : '★★★'
   }
   handleClick = (Name, Descriptions, Ratings, Ratings2) => {
       this.setState({

@@ -38,6 +38,9 @@ overflow:scroll;
   padding: 0 1.5rem 0 1.5rem !important;
 }
 .date{position:absolute; right: 15px; top: 10px;}
+.picture{
+  margin-bottom:15px;
+}
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
