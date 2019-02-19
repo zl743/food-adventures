@@ -5,7 +5,11 @@ function Menu(props) {
   return (
     <div className="col red darken-3 s12 m4 fullRowContent z-depth-3">
     {/* card html*/}
-    {data.map(card => { return(
+    {data.sort(function(a,b){
+      var keyA = a.id;
+      var keyB = b.id;
+      console.log(keyA, keyB)
+    }).map(card => { return(
       <div className="col s12" key={card.id}>
         <div className={card.type == 'restaurant' ? 'card horizontal' : 'card horizontal recipe amber lighten-5'}>
 
