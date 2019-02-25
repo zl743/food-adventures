@@ -93,5 +93,16 @@
  "ratings2":"★★★★★",
  "link":"https://jejunoodlebar.com/#Menu",
  "type":"restaurant",
- "descriptions": "This 2019 Michelin Star restaurant did not disappoint. For appetizers, the chicken wings were hot, crispy, and juicy with the pickled vegetables being a perfect compliment. The Tuna Yuk Hue was a light and refreshing appetizer with cucumber kimchi, roasted marcona almonds, toasted seaweed, and sesame soy sauce drizzled all over the bits of fatty tuna. <br/> <br/> The So Ramen was clearly the star of the show, with the raw veal cooking in the broth and adding an extra dimension to the garlicky broth. It was probably the richest ramen broth I've ever had, yet the flavors weren't overpowering at all. The Gochu Ramen was basically what you would expect ramen to taste like with a gochujang broth, and the pork belly was crispy yet tender on the inside." }
+ "descriptions": "This 2019 Michelin Star restaurant did not disappoint. For appetizers, the chicken wings were hot, crispy, and juicy with the pickled vegetables being a perfect compliment. The Tuna Yuk Hue was a light and refreshing appetizer with cucumber kimchi, roasted marcona almonds, toasted seaweed, and sesame soy sauce drizzled all over the bits of fatty tuna. <br/> <br/> The So Ramen was clearly the star of the show, with the raw veal cooking in the broth and adding an extra dimension to the garlicky broth. It was probably the richest ramen broth I've ever had, yet the flavors weren't overpowering at all. The Gochu Ramen was basically what you would expect ramen to taste like with a gochujang broth, and the pork belly was crispy yet tender on the inside." },
+ {"id" : "8",
+  "name":"English Breakfast",
+  "date":"February 17, 2019",
+  "cuisine": "English",
+  "finalscore": "★ 7/10",
+  "address": "Homemade Recipe",
+  "ratings":"★★★★",
+  "ratings2":"★★★",
+  "link":"http://allrecipes.co.uk/recipe/32168/full-english-breakfast.aspx",
+  "type":"recipe",
+  "descriptions": "Apparently English breakfasts were made so that you wouldn't have to eat another meal for the entire day if you were on the road, which explains why this meal is so heavy. This breakfast was fun to make and the combination of baked beans and toast was a pleasant surprise to my Americanized tastebuds. There's nothing that screams amazing about this recipe, but it's good old greasy comfort food in a way that's kind of like your standard American bacon and eggs with hash browns, but with some <i>exotic</i> twists like fried tomatoes and baked beans. I would have loved to try some blood sausage too, but perhaps that will be for another day.<br/><br/> The New Yorkers in us decided to swap bagels for toast because we couldn't be assed to buy a whole loaf of bread if we were going to use roughly two to three slices. But if you're in New York City, why not use a bagel instead? It's damn near impossible to find a shitty bagel in the city." }
 ]
