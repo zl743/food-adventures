@@ -1,18 +1,9 @@
 import React, { Component } from 'react';
-
+import ImageGallery from './imageGallery.js';
 
 function Page(props) {
 
-  function importAll(r) {
-    let images = [];
-    for (var index = 0; index < r.keys().map(r).length; ++index) {
-      if(r.keys().map(r)[index].indexOf(props.Name.replace(/\s+/g, '').toLowerCase()) !== -1){
-        images.push(r.keys().map(r)[index]);
-      }
-    }
-    return images;
 
-  }
   function createMarkup() {
     return {__html: props.Description};
   }
@@ -23,8 +14,7 @@ function Page(props) {
 
       </div>)
   } else{
-    const images = importAll(require.context('./img', false, /\.(png|jpe?g|svg)$/));
-    return(
+        return(
 
       <div className="col s12 m8 fullRowContent pageContent">
 
@@ -38,17 +28,7 @@ function Page(props) {
               <br/>
             </div>
           </div>
-          <div className="row">
-            <div className="col s12 m4 picture">
-                <div className="material-placeholder"><img className="materialboxed" width="100%" src={images[0]}/></div>
-            </div>
-            <div className="col s12 m4 picture">
-                <div className="material-placeholder"><img className="materialboxed" width="100%" src={images[1]}/></div>
-            </div>
-            <div className="col s12 m4 picture">
-                <div className="material-placeholder"><img className="materialboxed" width="100%" src={images[2]}/></div>
-            </div>
-          </div>
+          <ImageGallery Name={props.Name}/>
       </div>)
   }
 
