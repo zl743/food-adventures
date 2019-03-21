@@ -11,8 +11,22 @@ class App extends React.Component {
       Name: Name,
       Description: Descriptions,
       Rating: Ratings,
-      Rating2: Ratings2
+      Rating2: Ratings2,
+      MobileButtonClicked: (this.state.MobileButtonClicked) ? false : true
       })
+      if(this.state.MobileButtonClicked){
+      window.$('.mainContent').removeClass('hide-on-small-only');
+      }
+
+  }
+  mobileToggle = () => {
+    if(!this.state.MobileButtonClicked){
+      this.setState({MobileButtonClicked: true})
+      window.$('.mainContent').addClass('hide-on-small-only');
+    } else{
+      this.setState({MobileButtonClicked: false})
+      window.$('.mainContent').removeClass('hide-on-small-only');
+    }
   }
   activeToggle = (toggle, type, id) => {
     var query;
@@ -78,19 +92,39 @@ class App extends React.Component {
   }
   componentDidUpdate(){
     var materialboxElems = window.$('.materialboxed');
-    var mboxInstances = window.M.Materialbox.init(materialboxElems, {})
+    var mboxInstances = window.M.Materialbox.init(materialboxElems, {});
+    var mobileButtonElems = window.$('.fixed-action-btn');
+    var mobileButtonInstances = window.M.FloatingActionButton.init(mobileButtonElems, {
+      hoverEnabled: false
+    });
+    //console.log(mobileButtonElems, mobileButtonInstances)
   }
   componentDidMount = (e) => {
+    var mobileButtonElems = window.$('.fixed-action-btn');
+    var mobileButtonInstances = window.M.FloatingActionButton.init(mobileButtonElems, {
+      hoverEnabled: false
+    });
+    //console.log(mobileButtonElems, mobileButtonInstances)
   }
   render() {
     return (
       <div className="App">
           <div className="row fullRow">
+          { (this.state.MobileButtonClicked) ? <div className="hide-on-med-and-up"><Nav activeToggle={this.activeToggle}></Nav><Menu state={this.state} handleClick={this.handleClick} ></Menu></div>: ''}
+              <div  className="mainContent" >
               <Page Name={this.state.Name} Description={this.state.Description} Ratings = {this.state.Rating} Ratings2 = {this.state.Rating2}>
               </Page>
+              </div>
+              <div className="hide-on-med-and-up fixed-action-btn" onClick={this.mobileToggle}>
+              <a className="btn-floating btn-large red">
+              <i className="large material-icons">+</i>
+              </a>
+              </div>
+              <div className="hide-on-small-only">
               <Nav activeToggle={this.activeToggle}></Nav>
               <Menu state={this.state} handleClick={this.handleClick} >
               </Menu>
+              </div>
             </div>
       </div>
     );
