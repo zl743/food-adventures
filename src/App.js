@@ -21,10 +21,12 @@ class App extends React.Component {
   }
   mobileToggle = () => {
     if(!this.state.MobileButtonClicked){
-      this.setState({MobileButtonClicked: true})
+      this.setState({MobileButtonClicked: true});
+      window.$('#navIconButton').css({transition: 'transform .1s linear',transform:'rotate(180deg)'});;
       window.$('.mainContent').addClass('hide-on-small-only');
     } else{
-      this.setState({MobileButtonClicked: false})
+      this.setState({MobileButtonClicked: false});
+      window.$('#navIconButton').css({transition: 'transform .1s linear',transform:'rotate(360deg)'});
       window.$('.mainContent').removeClass('hide-on-small-only');
     }
   }
@@ -117,7 +119,7 @@ class App extends React.Component {
               </div>
               <div className="hide-on-med-and-up fixed-action-btn" onClick={this.mobileToggle}>
               <a className="btn-floating btn-large red">
-              <i className="large material-icons">+</i>
+              <i id="navIconButton" className="large material-icons z-depth-5 ">navigate_next</i>
               </a>
               </div>
               <div className="hide-on-small-only">

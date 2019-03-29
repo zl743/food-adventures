@@ -19,6 +19,16 @@ h1{
   text-transform: uppercase;
   margin-bottom:0 !important;
 }
+.tab a{
+  color: white !important;
+}
+.tab .active {
+  background-color:#d50000 !important;
+}
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+    background-color: rgba(246,178,181,0) !important;
+    outline: none;
+}
 .fullRowContent{
 overflow:scroll;
 
