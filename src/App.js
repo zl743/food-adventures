@@ -15,6 +15,7 @@ class App extends React.Component {
       MobileButtonClicked: (this.state.MobileButtonClicked) ? false : true
       })
       if(this.state.MobileButtonClicked){
+      window.$('#navIconButton').css({transition: 'transform .1s linear',transform:'rotate(360deg)'});
       window.$('.mainContent').removeClass('hide-on-small-only');
       }
 
